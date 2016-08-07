@@ -29,6 +29,8 @@ SOLUTION: Decided to create a concept from scratch for more control of the templ
 //TODO
 Port template and functionality to Drupal - just for fun
 Add Angular functionality to move some functionality to the client; especially displaying data from API
+Implement font-size adjustment
+
 Technologies In-Use
 - DataSources: BLS API
 - CSS Framework: 
