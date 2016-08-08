@@ -1,0 +1,28 @@
+﻿{
+"data":[{
+"CUSR0000SA0":"Consumer Price Index"
+}, 
+{"LNS14000000":"Unemployment Rate"
+},
+{"CES0000000001":"Payroll Employment"
+}, 
+{
+"CES0500000002":"Average Hourly Earnings"
+}, 
+{
+"WPSFD4":"Producer Price Index - Final Demand"
+}, 
+{
+"CIS1010000000000Q":"Employment Cost Index"
+}, 
+{
+"PRS85006092":"Productivity"
+},
+
+{"EIUIR":"US Import Price Index"
+}, 
+{"EIUIQ":"US Export Price Index"
+} 
+]}
+
+

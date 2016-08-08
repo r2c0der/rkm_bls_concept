@@ -1,0 +1,123 @@
+/**
+ * @developer Rayvn Manuel
+ * @purpose TECHNICAL PORTFOLIO - Bureau of Labor Statistics | Concept Site
+ * @copyright 2016
+ * @fileName rkm_bls_mixins.less
+ */
+
+
+//MIXINS | FUNCTIONS
+.font-family_default(@fontFamily: 'Open Sans', sans-serif;){
+  font-family:@fontFamily;
+}
+
+
+.background_color(@color){
+  background-color:@color;
+}
+
+.text-decoration(@decoration){
+  text-decoration: @decoration;
+}
+
+.text-decoration(){
+  text-decoration:none;
+}
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.padding(@top, @right, @bottom, @left){
+  padding-top:@top;
+  padding-right:@right;
+  padding-bottom:@bottom;
+  padding-left:@left;
+
+}
+
+
+.padding(@size){
+  padding-top:@size;
+  padding-right:@size;
+  padding-bottom:@size;
+  padding-left:@size;
+
+}
+
+
+.margin(@top, @right, @bottom, @left){
+  margin-top:@top;
+  margin-right:@right;
+  margin-bottom:@bottom;
+  margin-left:@left;
+}
+
+.margin(@size){
+  margin-top:@size;
+  margin-right:@size;
+  margin-bottom:@size;
+  margin-left:@size;
+}
+
+.border-radius(@topleft, @topright, @bottomright,@bottomleft) {
+  border-top-left-radius:@topleft;
+  border-top-right-radius:@topright;
+  border-bottom-right-radius:@bottomright;
+  border-bottom-left-radius:@bottomleft;
+}
+
+/**
+Effects two corners on the diagonal
+e.g. topleft + bottom right or topright and bottomleft
+*/
+.border-radius(@radius, @radius) {
+  -webkit-border-radius: @radius @radius;
+  -moz-border-radius: @radius @radius;
+  border-radius: @radius @radius;
+}
+
+.transition(@name, @duration, @delay, @ease) {
+  -webkit-transition: @name @duration @delay @ease;
+  -moz-transition: @name @duration @delay @ease;
+  -ms-transition: @name @duration @delay @ease;
+  transition: @name @duration @delay @ease;
+  -o-transition: @name @duration @delay @ease;
+}
+
+
+/**
+2D TRANSFORMS
+  translate(x,y) moving the element along the X- and the Y-axis
+  rotate(angle in degrees)
+  scale(width multiplier, height multiplier)
+  skewX(angle in degrees)
+  skewY(angle in degrees)
+  matrix() combines all the 2D transform methods into one.
+  -- matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()):
+ **/
+
+.transform(@effect, @args){
+  -webkit-transform: @effect(@args);
+  -moz-transform: @effect(@args);
+  -o-transform: @effect(@args);
+  -ms-transform: @effect(@args);
+  transform: @effect(@args);
+}
+
+
+/**
+box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+horizontal: positive => right; left <= negative;
+vertical: positive == down(V)  negative == up(A)
+color: rgba()
+
+**/
+.box-shadow(@horizontal,  @vertical, @blur, @opt_spread:0, @color){
+  -moz-box-shadow: @horizontal @vertical @blur @opt_spread @color;
+  -webkit-box-shadow: @horizontal @vertical @blur @opt_spread @color;
+  box-shadow:  @horizontal @vertical @blur @opt_spread @color;
+}
