@@ -2,9 +2,8 @@
 
 <?php
 define ("PAGE_TITLE", "BLS Responsive Concept Site");
-set_include_path( get_include_path() . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] );
 include_once  'inc/utilies.inc';
-include_once '/inc/services.inc';
+include_once 'inc/services.inc';
 include_once 'inc/rkm_bls_homepage.inc';
 
 ?>
@@ -30,15 +29,6 @@ include_once 'inc/rkm_bls_homepage.inc';
         $(document).ready(function(){
             printBLSName();
 
-            function resizeText(multiplier) {
-                if (document.body.style.fontSize == "") {
-                    document.body.style.fontSize = "1.0em";
-                }
-                document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
-            }
-
-
-
         });
     </script>
 
@@ -47,7 +37,76 @@ include_once 'inc/rkm_bls_homepage.inc';
 <body>
 
 <!--  BLS | HEADER -->
-<?php echo displayPageTop() ?>
+<header>
+    <!-- DOL | NAVBAR ROW -->
+    <div class="row rkm_bls_header-topbar">
+        <div class="col-lg-12 col-md-6=12 ">
+            <nav class="navbar navbar-inverse navbar-fixed-top rkm_bls_header-topbar--nav cbp-af-header" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rkm_bls_header-topbar--collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="" href="#">
+                         <span class="rkm_bls_header-topbar--title">
+                        <img src="assets/logos/USDOL_Seal_circa_2015.svg" width="35" />
+                           UNITED STATES DEPARTMENT OF LABOR </span>
+                        </a><!-- ./HEADER TOPBAR DOL-->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="rkm_bls_header-topbar--collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">Subjects</a></li>
+                                    <li><a href="#">Data Tools</a></li>
+                                    <li><a href="#">Publications</a></li>
+                                    <li><a href="#">Economic Releases </a></li>
+                                    <li><a href="#">Students </a></li>
+                                    <li><a href="#">Beta </a></li>
+                                </ul>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Subjects</a></li>
+                            <li><a href="#">Data Tools</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Economic Releases </a></li>
+                            <li><a href="#">Students </a></li>
+                            <li><a href="#">Beta </a></li>
+
+                        </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+            </nav>
+
+
+        </div>  <!-- ./HEADER TOPBAR NAVIGATION -->
+    </div> <!-- ./HEADER TOPBAR DOL/NAV ROW -->
+
+    <!-- BLS | SEARCH ROW -->
+    <div class="row rkm_bls_header-identity">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 rkm_bls_header-identity--logo">
+                <span class="rkm_bls_header-identity--title">
+                  <img src="assets/logos/Bureau_of_labor_statistics_logo.svg" width="75" />
+                <span id='bls'> Bureau of Labor Statistics</span>
+                </span>
+        </div> <!-- ./HEADER IDENTITY LOGO & TITLE COL -->
+
+        <div class="col-lg-2 col-md-5 col-sm-12 col-xs-12 offset-sm-6 offset-xs-6 rkm_bls_header-search">
+   <!--         <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>-->
+        </div>   <!-- ./HEADER IDENTITY SEARCHBOX COL -->
+    </div>  <!-- ./HEADER BLS/SEARCH ROW -->
+
+</header> <!-- ./BLS | HEADER -->
 <!-- ./BLS | HEADER -->
 <!--  BLS | FEATURED | CONTAINER -->
 <div class="container-fluid">
@@ -412,7 +471,8 @@ include_once 'inc/rkm_bls_homepage.inc';
 </div>   <!-- ./FOOTER | CONTACT INFO ROW -->
 </div>  <!--  ./BLS | FOOTER CONTAINER-FLUID -->
 </footer>  <!--  ./BLS | FOOTER -->
-
+<script type="text/javascript" src="js/classie.js" ></script>
+<script type="text/javascript" src="js/cbpAnimatedHeader.js" ></script>
 </body>
 
 
