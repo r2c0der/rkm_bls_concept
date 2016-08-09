@@ -32,9 +32,11 @@ function displayHeader(){
     <!-- Optional theme -->
     <link type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet/less" href="css/rkm_bls_core.less" type="text/css" />
-
-    <!-- FRONT-LOADING JS LIBRARIES -->
+    
+  <!-- FRONT-LOADING JS LIBRARIES -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
+
+   
 
 ';
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <?php
+session_start();
 define ("PAGE_TITLE", "BLS Responsive Concept Site");
 include_once  'inc/utilies.inc';
 include_once 'inc/services.inc';
@@ -26,9 +27,7 @@ include_once 'inc/rkm_bls_homepage.inc';
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" async></script>
     <script type="text/javascript" src="js/rkm_bls_app.js" async></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            printBLSName();
-
+        printBLSName();
         });
     </script>
 
@@ -38,82 +37,69 @@ include_once 'inc/rkm_bls_homepage.inc';
 
 <!--  BLS | HEADER -->
 <header>
-    <!-- DOL | NAVBAR ROW -->
-    <div class="row rkm_bls_header-topbar">
-        <div class="col-lg-12 col-md-6=12 ">
-            <nav class="navbar navbar-inverse navbar-fixed-top rkm_bls_header-topbar--nav cbp-af-header" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rkm_bls_header-topbar--collapse" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top rkm_bls_header-topbar--nav cbp-af-header" role="navigation"">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rkm_bls_header-topbar--collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
 
-                        <a class="" href="#">
-                         <span class="rkm_bls_header-topbar--title">
-                        <img src="assets/logos/USDOL_Seal_circa_2015.svg" width="35" />
-                           UNITED STATES DEPARTMENT OF LABOR </span>
-                        </a><!-- ./HEADER TOPBAR DOL-->
-                    </div>
+            <span class="rkm_bls_topbar-dol rkm_bls_topbar-logo--dol rkm_bls_topbar-title--dol">
+            <a href=https://www.dol.gov/" target="_blank" class="rkm_bls_topbar-anchor--dol" title="US Department of Labor"> <img src="assets/logos/USDOL_Seal_circa_2015.svg" width="45" class="rkm_bls_topbar-logo--dol"/><span id="dol">UNITED STATES DEPARTMENT OF LABOR </span></a></span>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="rkm_bls_header-topbar--collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="#">Subjects</a></li>
-                                    <li><a href="#">Data Tools</a></li>
-                                    <li><a href="#">Publications</a></li>
-                                    <li><a href="#">Economic Releases </a></li>
-                                    <li><a href="#">Students </a></li>
-                                    <li><a href="#">Beta </a></li>
-                                </ul>
+            <span class="rkm_bls_topbar-bls rkm_bls_topbar-logo--bls rkm_bls_topbar-title--bls">
+            <a class="rkm_bls_header-topbar--anchor" href="#" title="Bureau of Labor Statistics">
+            <img src="assets/logos/Bureau_of_labor_statistics_logo.svg" width="50" class="rkm_bls_topbar-logo--bls"/> <span id="bls_top">BUREAU OF LABOR STATISTICS</span></a> </span>
 
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Subjects</a></li>
-                            <li><a href="#">Data Tools</a></li>
-                            <li><a href="#">Publications</a></li>
-                            <li><a href="#">Economic Releases </a></li>
-                            <li><a href="#">Students </a></li>
-                            <li><a href="#">Beta </a></li>
+            </div> <!-- /.NAVBAR - NAVBAR-HEADER -->
 
-                        </ul>
-                            </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-            </nav>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="rkm_bls_header-topbar--collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Search</a></li>
+            <li><a href="#">Data Tools</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Economic Releases </a></li>
+            <li><a href="#">Students </a></li>
+            <li><a href="#">Beta </a></li>
+            </ul>
+
+            <ul class="dropdown-menu">
+            <li><a href="#">Subjects</a></li>
+            <li><a href="#">Data Tools</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Economic Releases </a></li>
+            <li><a href="#">Students </a></li>
+            <li><a href="#">Beta </a></li>
+            </ul>
+            </div><!-- /.navbar-collapse -->
+            </div> <!-- /.NAVBAR - CONTAINER FLUID -->
+        </nav> <!-- /.NAV NAVBAR -->
 
 
-        </div>  <!-- ./HEADER TOPBAR NAVIGATION -->
-    </div> <!-- ./HEADER TOPBAR DOL/NAV ROW -->
+        <!-- BLS |  BLS SEARCHBAR ROW  -->
+    <div class="container-fluid">
+        <div class="row rkm_bls_searchbar-identity">
+        <span class="rkm_bls_search-bls rkm_bls_search-logo--bls rkm_bls_search-title--bls ">
+        <a class="rkm_bls_header-search--anchor" href="http://bls.gov" title="Bureau of Labor Statistics">
+        <img src="assets/logos/Bureau_of_labor_statistics_logo.svg" width="75" class="rkm_bls_searchbar-logo--bls"/> <span id="bls_search">BUREAU OF LABOR STATISTICS</span> </a> </span>
 
-    <!-- BLS | SEARCH ROW -->
-    <div class="row rkm_bls_header-identity">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 rkm_bls_header-identity--logo">
-                <span class="rkm_bls_header-identity--title">
-                  <img src="assets/logos/Bureau_of_labor_statistics_logo.svg" width="75" />
-                <span id='bls'> Bureau of Labor Statistics</span>
-                </span>
-        </div> <!-- ./HEADER IDENTITY LOGO & TITLE COL -->
-
-        <div class="col-lg-2 col-md-5 col-sm-12 col-xs-12 offset-sm-6 offset-xs-6 rkm_bls_header-search">
-   <!--         <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>-->
-        </div>   <!-- ./HEADER IDENTITY SEARCHBOX COL -->
-    </div>  <!-- ./HEADER BLS/SEARCH ROW -->
+        </div> <!-- BLS | BLS SEARCHBAR ROW -->
+    </div> <!-- BLS | CONTAINER-FLUID BLS SEARCHBAR  -->
 
 </header> <!-- ./BLS | HEADER -->
-<!-- ./BLS | HEADER -->
+
 <!--  BLS | FEATURED | CONTAINER -->
+
 <div class="container-fluid">
 <!-- BLS | FEATURED -->
 <div class="row rkm_bls_featured">
 <!-- SECTION | FEATURED PRESS RELEASES -->
-<section class="col-lg-5 col-md-5 rkm_bls_featured-releases">
+<section class="col-lg-7 col-md-7 rkm_bls_featured-releases">
 <div class="panel panel-default rkm_bls_releases-daily">
 <div class="panel-heading rkm_bls_releases-daily--heading">PRESS RELEASES</div>
 <div class="panel-body rkm_bls_releases-daily--body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum lectus ante, quis congue lacus suscipit sit amet. In enim felis, blandit a convallis nec, commodo et lectus. Sed hendrerit tortor ut tellus hendrerit, ut semper quam blandit. In ac odio dui. Proin sollicitudin, eros aliquam scelerisque iaculis, arcu quam vehicula purus, quis interdum metus metus vitae mi. Morbi ut purus sit amet quam accumsan volutpat condimentum in ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer a accumsan neque.</p>
@@ -138,240 +124,358 @@ include_once 'inc/rkm_bls_homepage.inc';
 </section>
 <!-- ./SECTION | FEATURED PRESS RELEASES -->
 <!-- SECTION | FEATURED MONTHLY LABOR REVIEW -->
-<section class="col-lg-3 col-md-3 rkm_bls_featured-review">
-<div class="panel panel-default rkm_bls_review-monthlylabor">
-<div class="panel-heading rkm_bls_review-monthlylabor--heading">MONTHLY LABOR REVIEW</div>
-<div class="panel-body rkm_bls_releases-daily--body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum lectus ante, quis congue lacus suscipit sit amet.Donec quis tellus quam. Phasellus fermentum massa sed lorem bibendum aliquam. Vivamus dictum odio ante, vel facilisis massa scelerisque sit amet. Pellentesque interdum rutrum libero. Aliquam sit amet mi elit. Mauris ut purus tincidunt, viverra massa tempus, lobortis ligula. In massa tortor, iaculis sed porttitor sed, rhoncus ac tortor. Mauris pulvinar lacus efficitur, molestie urna vitae, vehicula lectus. Mauris dignissim justo a lorem blandit, mollis lacinia sapien fermentum. Vivamus et libero sed nisl sodales varius et sed tortor. Nullam ullamcorper orci lacus, at sollicitudin enim porta sit amet. Nulla facilisi.</p>
-</div> <!-- ./PANEL BODY | MONTHLY LABOR -->
-</div> <!-- ./PANEL - MONTHLY LABOR | BODY -->
-</section>
-<!-- ./SECTION | FEATURED MONTHLY REVIEW-->
-
-<!-- SECTION | FEATURED ASIDE ITEMS -->
-<div class="row">
-<section class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 rkm_bls_section-featured--items">
-<!-- ARTICLE | WCAG -->
-<article class="rkm_bls_article-wcag">
-        <span class="rkm_bls_wcag-icons">
+<section class="col-lg-5 col-md-5 rkm_bls_featured-review">
+    <!-- ARTICLE | WCAG -->
+    <div class="rkm_bls_wcag">
+    <span class="rkm_bls_wcag-icons">
 <i class="fa fa-text-height fa-2x rkm_bls_wcag-icon--1 sr-only" title="Enlarge Font"></i>
 <i class="fa fa-text-height fa-lg rkm_bls_wcag-icon--2" aria-hidden="true"></i>
 <i class="fa fa-text-height   rkm_bls_wcag-icon--3" aria-hidden="true"  ></i>
 <i class="fa fa-print fa-lg rkm_bls_wcag-icon--4" aria-hidden="true"></i>
-
-
-        </span>
-</article>
-<!-- ARTICLE | OCCUPATIONAL HANDBOOK -->
-<article class="rkm_bls_article-handbook" >
+    </span>
+    </div>
 <div class="panel panel-default rkm_bls_review-monthlylabor">
-    <div class="panel-body rkm_bls_releases-daily--body">
-        <a href="http://www.bls.gov/ooh/" target="_blank" title="Occupational Outlook Handbook" ><img src="assets/graphics/BLS_OccupationalHandbook_v2.png" class="img-responsive rkm_bls_article-handbook--img"/></a></div>
-</div> </article>
+<div class="panel-heading rkm_bls_review-monthlylabor--heading">MONTHLY LABOR REVIEW</div>
+<div class="panel-body rkm_bls_releases-daily--body"><p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+</div> <!-- ./PANEL BODY | MONTHLY LABOR -->
+</div> <!-- ./PANEL - MONTHLY LABOR | BODY -->
 
-
-<!-- ARTICLE | SOCIAL MEDIA -->
-<article class="rkm_bls_article-socialmedia">
+    <!-- ARTICLE | SOCIAL MEDIA -->
+    <div class="rkm_bls_article-socialmedia">
     <span class="rkm_bls_socialmedia-icons">
       <a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x rkm_bls_socialmedia-icon" aria-hidden="true"></i></a>
        <a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook fa-2x rkm_bls_socialmedia-icon" aria-hidden="true"></i></a>
           <a href="#" target="_blank" title="LinkedIn"><i class="fa fa-linkedin fa-2x rkm_bls_socialmedia-icon" aria-hidden="true"></i></a>
     </span>
-</article>
-
-</section>    <!-- ./SECTION | FEATURED ASIDE ITEMS -->
-</div> <!-- ./BLS | FEATURED | ROW -->
+    </div>
+</section>
+<!-- ./SECTION | FEATURED MONTHLY REVIEW-->
 </div>  <!--  ./BLS | FEATURED | CONTAINER -->
 
 
 <!--./ BLS | FEATURED -->
 </div> <!--  ./BLS | FEATURED | CONTAINER -->
+
 <!--  BLS | MAIN CONTENT | CONTAINER-FLUID -->
 <div class="container-fluid">
 <!-- MAIN CONTENT | GEOGRAPHIC INFORMATION ROW -->
-<div class="row rkm_bls_section-info--data">
-<div class="col-lg-7 col-md-7  rkm_bls_section-info--blsapi">
-<div class="panel panel-default rkm_bls_section-blsapi">
-    <div class="panel-heading  rkm_bls_section-blsapi--heading">BLS API DATA</div>
-    <div class="panel-body  rkm_bls_section-blsapi--body"><p>
-            Aliquam convallis sapien ac ex rhoncus mollis. Mauris maximus nunc diam, nec vulputate mauris vulputate et. Phasellus vitae nunc et tortor blandit auctor. Etiam non enim feugiat, aliquam turpis sit amet, congue dolor. Etiam ultrices ultrices viverra. Curabitur non arcu quis justo cursus condimentum non sit amet orci. Praesent porttitor interdum nibh at convallis. Curabitur elementum risus id venenatis luctus. Quisque tempor lorem ut sapien posuere sodales. Phasellus id lectus vitae dui convallis hendrerit a quis arcu. Ut sem nisl, posuere eget rutrum mattis, mattis quis nulla. Maecenas orci tellus, malesuada at nulla nec, interdum porta augue.
-        </p>
-    </div> <!-- ./PANEL BODY | BLS API -->
-</div> <!-- ./PANEL - BLS API | BODY -->
-</div>  <!-- ./MAIN CONTENT | BLS API COL -->
+    <div class="row rkm_bls_section-info--data">
 
-<div class="col-lg-5 col-md-5 rkm_bls_section-info--geo">
-<div class="panel panel-default rkm_bls_section-geo">
-    <div class="panel-heading  rkm_bls_section-geo--heading">GEOGRAPHIC INFORMATION</div>
-    <div class="panel-body  rkm_bls_section-geo--body">
-        <img src="assets/images/geographic_info/bls_region_newyork_newjersey_ny.jpg" class="img-responsive"/>
-    </div> <!-- ./PANEL BODY | BLS API -->
-</div> <!-- ./PANEL - BLS API | BODY -->
-</div>  <!-- ./MAIN CONTENT | GEO INFO COL -->
-</div>   <!-- ./MAIN CONTENT | GEOGRAPHIC INFORMATION ROW -->
+        <!---- BEGIN COLUMN1 -->
+        <div class="col-lg-6 col-md-6 rkm_bls_section--col1" >
+            <!---- ROW | BLS API DATA -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12  rkm_bls_section-info--blsapi">
+                    <div class="panel panel-default rkm_bls_section-blsapi">
+                        <div class="panel-heading  rkm_bls_section-blsapi--heading">BLS API DATA</div>
+                        <div class="panel-body  rkm_bls_section-blsapi--body"><p>
+                                Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Zillow zimbra trulia voki loopt zimbra yuntaa lanyrd stypi cotweet jabber joukuu, kosmix flickr yammer zapier divvyshot jumo ngmoco lala divvyshot wufoo scribd. Lanyrd skype zoosk quora joost edmodo orkut, imeem diigo etsy odeo waze wikia, imvu quora chegg koofers stypi. Geni kazaa nuvvo heekya eskobo mozy convore sococo joost trulia hojoki chartly zynga empressr zynga, tumblr akismet etsy reddit imvu yammer voxy eduvant zanga kaboodle zoho diigo trulia. Chartly bebo chegg heroku kiko grockit plaxo, jibjab kippt xobni bebo lijit knewton, appjet zoho kazaa joukuu woopra                  </p>
+                        </div> <!-- ./PANEL BODY | BLS API -->
+                    </div> <!-- ./PANEL - BLS API | BODY -->
+                </div>  <!-- ./MAIN CONTENT | BLS API COL -->
+            </div> <!---- ./ROW | BLS API DATA -->
+            <!---- ROW | REGIONAL HOME PAGES -->
+            <div class="row">
+                <!-- MAIN CONTENT | REGIONAL HOMEPAGES -->
+                <div class="col-lg-12 col-md-12  rkm_bls_section-info--regional">
+                    <div class="panel panel-default rkm_bls_section-regional">
+                        <div class="panel-heading  rkm_bls_section-regional--heading">REGIONAL HOMEPAGES</div>
+                        <div class="panel-body  rkm_bls_section-regional--body"><p>
+                                BLS offers many types of data for regions, states and local areas. To browse for available information, visit the regional pages to the right or use the economic news release finder below.</p>
+                            <p>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-2 form">
+                                    <form class="form-horizontal state_data-select form-inline" role="form"  action="index.php" method="post">
+                                        <div class="form-group">
+                                            <div class="col-lg-12 col-md-12 ">
+                                                <?php createSelectOptions(getStateConfigList())   ?>
+                                            </div> <!--- ./FORM | FORM GROUP - STATES SELECT LIST  COL-->
+                                        </div><!--- ./FORM| FORM GROUP - STATE SELECT LIST -->
 
-<!-- MAIN CONTENT | API DATA & INFORMATION ROW-->
-<div class="row rkm_bls_section-info--api">
-<!-- MAIN CONTENT | API FEED COL-->
-<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-api">
-<div class="panel panel-default rkm_bls_section-api">
-    <div class="panel-heading  rkm_bls_section-api--heading">LATEST NUMBERS</div>
-    <div class="panel-body  rkm_bls_section-api--body">
-        <ul>
-            <li>
-                <a href="http://www.bls.gov/news.release/cpi.toc.htm"
-                   target="_blank" title="Consumer Price Index">
-                    Consumer Price Index (CPI):</a><br />
-            <span id="cpi" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/empsit.toc.htm"
-                   target="_blank" title="Unemployment Rate">
-                    Unemployment Rate:</a><br />
-                <span id="empsit_rate" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/empsit.toc.htm"
-                   target="_blank" title="Payroll Employment">
-                    Payroll Employment:</a><br />
-                <span id="empsit_pay" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/empsit.toc.htm"
-                   target="_blank" title="Average Hourly">
-                    Average Hourly:</a><br />
-                <span id="empsit_hourly" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/ppi.toc.htm"
-                   target="_blank" title="Producer Price Index">
-                    Producer Price Index:</a><br />
-                <span id="ppi" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/eci.toc.htm"
-                   target="_blank" title="Economic Index">
-                    Economic Index:</a><br />
-                <span id="eci" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/prod2.toc.htm"
-                   target="_blank" title="Productivity">
-                    Productivity:</a><br />
-                <span id="prod" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/ximpim.toc.htm"
-                   target="_blank" title=" US Import Price Index">
-                   US Import Price Index:</a><br />
-                <span id="ximpim" class="rkm_bls_section-api--item"></span></li>
-            <li>
-                <a href="http://www.bls.gov/news.release/ximpim.toc.htm"
-                   target="_blank" title=" US Export Price Index">
-                    US Export Price Index:</a><br />
-                <span id="xempim" class="rkm_bls_section-api--item"></span></li>
+                                        <div class="form-group">
+                                            <div class="col-lg-12 col-md-12">
+                                                <button type="submit" name="btn_submit" class="btn btn-default">GO!</button>
+                                                <input type="hidden" name="action" value="state" />
+                                            </div>
+                                        </div><!-- ./form-group submit button -->
+                                    </form><!--- ./FORM | FORM GROUP - STATES -->
 
-        </ul>
+                                    <form class="form-horizontal topic_data-select form-inline rkm_bls_form-topic" role="form"  action="index.php" method="post">
+                                        <div class="form-group">
+                                            <div class="col-lg-12 col-md-12">
+                                                <select class="form-control rkm_bls_topic-list">
+                                                    <optgroup label="Employment and Unemployment">
+                                                        <option value="Employment and Unemployment">
+                                                            Employment and Unemployment
+                                                        </option>
+                                                        <option value="/regions/subjects/employment.htm">
+                                                            Employment
+                                                        </option>
+                                                        <option value="/regions/subjects/unemployment.htm">
+                                                            Unemployment
+                                                        </option>
+                                                    </optgroup>
+                                                    <optgroup label="Inflation, Prices, and Spending"">
+                                                    <option value="Inflation, Prices, and Spending">
+                                                        Inflation, Prices, and Spending
+                                                    </option>
+                                                    <option value="/regions/subjects/average-energy-prices.htm">
+                                                        Average energy prices
+                                                    </option>
+                                                    <option value="/regions/subjects/consumer-price-indexes.htm">
+                                                        Consumer price indexes
+                                                    </option>
+                                                    <option value="/regions/subjects/consumer-spending.htm">
+                                                        Consumer spending
+                                                    </option>
+                                                    <option value="/regions/subjects/industry-price-indexes.htm">
+                                                        Industry price indexes
+                                                    </option>
+                                                    </optgroup>
+                                                    <optgroup label="Pay and Benefits">
+                                                        <option value="Pay and Benefits">
+                                                            Pay and Benefits
+                                                        </option>
+                                                        <option  value="/regions/subjects/benefits.htm">
+                                                            Benefits
+                                                        </option>
+                                                        <option  value="/regions/subjects/pay.htm">
+                                                            Pay
+                                                        </option>
+                                                        </optgroup>
+                                                    <optgroup label="Workplace Injuries and Illnesses">
+                                                        <option  value="/regions/subjects/workplace-fatalities.htm">
+                                                            Workplace fatalities
+                                                        </option>
+                                                        <option value="/regions/subjects/workplace-injuries-and-illnesses.htm">
+                                                            Workplace injuries and illnesses
+                                                        </option>
+                                                    </optgroup>
+                                                </select>
+                                            </div> <!--- ./FORM | FORM GROUP -LIST ITEMS COL-->
+                                        </div> <!--- ./FORM | FORM GROUP - SUBJECT -->
+                                        <div class="form-group">
+                                            <div class="col-lg-12 col-md-12">
+                                                <button type="submit" name="btn_submit" class="btn btn-default">GO!</button>
+                                                <input type="hidden" name="action" value="subject" />
+                                            </div>
+                                        </div><!-- ./form-group submit button -->
+                                    </form>
+                                </div><!-- ./DIV form -->
+                            </div> <!-- ./DIV row -->
+                            </p>
+                        </div> <!-- ./PANEL BODY | REGIONAL HOME PAGES-->
+                    </div> <!-- ./PANEL - DEFAULT | REGIONAL HOME PAGES -->
+                </div>  <!-- ./MAIN CONTENT | REGIONAL HOMEPAGES COL -->
+            </div><!---- ROW | REGIONAL HOME PAGES -->
+ </div> <!---- ./COLUMN ONE | REGIONAL HOME PAGES -->
 
-    </div> <!-- ./PANEL BODY | BLS API -->
-</div> <!-- ./PANEL - BLS API | BODY -->
+        <!---- COLUMN TWO | REGIONAL HOME PAGES -->
+        <div class="col-lg-6 col-md-6 rkm_bls_section--col2" >
+            <div class="col-lg-12 col-md-12 rkm_bls_section-info--geo">
+                <div class="panel panel-default rkm_bls_section-geo">
+                    <div class="panel-heading  rkm_bls_section-geo--heading">REGIONAL INFORMATION</div>
+                    <div class="panel-body  rkm_bls_section-geo--body">
+                        <img src="assets/images/geographic_info/accordion/bls_region_newyork_newjersey.png" class="img-responsive rkm_bls_section-geo--img"/>
+                    </div> <!-- ./PANEL BODY | BLS API -->
+                </div> <!-- ./PANEL - BLS API | BODY -->
+            </div>  <!-- ./MAIN CONTENT | GEO INFO COL -->
+        </div> <!----./ COLUMN TWO | REGIONAL HOME PAGES -->
+    </div>   <!-- ./MAIN CONTENT | GEOGRAPHIC INFORMATION ROW -->
 
-
-</div>  <!-- ./MAIN CONTENT | API  COL -->
-
-<!-- MAIN CONTENT | INFORMATION COL -->
-<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
-<!-- MAIN CONTENT | INFORMATION SECTION ROW-1 -->
-<div class="row  rkm_bls_section-info  rkm_bls_section-info--row-1">
-
-    <!-- MAIN | ECONOMIC COL -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-info--economics">
-<div class="panel panel-default rkm_bls_section-economic">
-<div class="panel-heading  rkm_bls_section-economic--heading">THE ECONOMICS DAILY</div>
-<div class="panel-body  rkm_bls_section-economic--body">
-<ul>
-<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-<li>Fusce non nulla ut odio sagittis tincidunt.</li>
-<li>Vestibulum laoreet odio at dictum sodales.</li>
-<li>Pellentesque fringilla ligula id dolor ornare, eu dignissim quam convallis.</li>
-</ul>
-</div>
-</div>
-
-    </div> <!-- ./MAIN | ECONOMIC COL -->
-
-    <!-- MAIN | PUBLICATIONS COL -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-info--publications">
-<div class="panel panel-default rkm_bls_section-publications">
-<div class="panel-heading  rkm_bls_section-publications--heading">PUBLICATIONS</div>
-<div class="panel-body  rkm_bls_section-publications--body">
-<ul>
-<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-<li>Fusce non nulla ut odio sagittis tincidunt.</li>
-<li>Vestibulum laoreet odio at dictum sodales.</li>
-<li>Pellentesque fringilla ligula id dolor ornare, eu dignissim quam convallis.</li>
-</ul>
-</div>
-</div>
-    </div><!-- ./MAIN | PUBLICATIONS COL -->
-    <!-- MAIN | TOPICS COL -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-info--topics">
-        <div class="panel panel-default rkm_bls_section-topics">
-        <div class="panel-heading  rkm_bls_section-topics--heading">TOPICS</div>
-            <div class="panel-body  rkm_bls_section-topics--body">
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                    <li>Fusce non nulla ut odio sagittis tincidunt.</li>
-                    <li>Vestibulum laoreet odio at dictum sodales.</li>
-                    <li>Pellentesque fringilla ligula id dolor ornare, eu dignissim quam convallis.</li>
-                </ul>
-            </div>
-        </div>
-    </div><!-- ./MAIN | TOPICS COL -->
-</div>  <!-- MAIN CONTENT | INFORMATION SECTION TOP ROW-1 -->
-
-<!-- MAIN CONTENT | INFORMATION SECTION ROW-2 -->
-<div class="row  rkm_bls_section-info  rkm_bls_section-info--row-2">
-    <!-- MAIN | RESOURCES COL -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-info--resources">
-        <div class="panel panel-default rkm_bls_section-resources">
-            <div class="panel-heading  rkm_bls_section-topics--heading">RESOURCES</div>
-            <div class="panel-body  rkm_bls_section-resources--body">
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                    <li>Fusce non nulla ut odio sagittis tincidunt.</li>
-                    <li>Vestibulum laoreet odio at dictum sodales.</li>
-                    <li>Pellentesque fringilla ligula id dolor ornare, eu dignissim quam convallis.</li>
-                </ul>
-            </div>
-        </div>
-    </div> <!-- ./MAIN |RESOURCES COL -->
-
-    <!-- MAIN | CAREERS COL -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-info--careers">
-        <div class="panel panel-default rkm_bls_section-careers">
-            <div class="panel-heading  rkm_bls_section-topics--heading">TOPICS</div>
-            <div class="panel-body  rkm_bls_section-careers--body">
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                    <li>Fusce non nulla ut odio sagittis tincidunt.</li>
-                    <li>Vestibulum laoreet odio at dictum sodales.</li>
-                    <li>Pellentesque fringilla ligula id dolor ornare, eu dignissim quam convallis.</li>
-                </ul>
-            </div>
-        </div>
-    </div> <!-- ./MAIN | CAREERS COL -->
-    <!-- MAIN | MORE INFO COL -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rkm_bls_section-info--more">
-        <div class="panel panel-default rkm_bls_section-moreinfo">
-            <div class="panel-heading  rkm_bls_section-topics--heading">TOPICS</div>
-            <div class="panel-body  rkm_bls_section-moreinfo--body">
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                    <li>Fusce non nulla ut odio sagittis tincidunt.</li>
-                    <li>Vestibulum laoreet odio at dictum sodales.</li>
-                    <li>Pellentesque fringilla ligula id dolor ornare, eu dignissim quam convallis.</li>
-                </ul>
-            </div>
-        </div>
-
-    </div> <!-- ./MAIN | MORE INFO COL -->
-</div>   <!-- MAIN CONTENT | INFORMATION SECTION ROW-2 -->
-</div>    <!-- ./MAIN CONTENT | INFORMATION COL -->
-</div>   <!-- ./ MAIN CONTENT | RSS FEED & INFORMATION ROW-->
 </div>   <!--  ./BLS | MAIN CONTENT | CONTAINER-FLUID -->
+
+<!--  BLS | TOPICS | CONTAINER-FLUID -->
+<div class="container-fluid">
+    <!-- MAIN CONTENT | API DATA & INFORMATION ROW-->
+    <div class="row rkm_bls_section-info--api">
+
+    <!--  BLS | SUBJECTS | COL1 -->
+ <div class="col-lg-3 col-md-3 rkm_bls_subjects-col1">
+     <!--  BLS | NUMBERS | ROW1 -->
+<div class="row rkm_bls_subjects-numbers--row1">
+    <!-- MAIN CONTENT | API FEED COL-->
+    <div class="col-lg-12 col-md-12 rkm_bls_section-api">
+        <div class="panel panel-default rkm_bls_section-api">
+            <div class="panel-heading  rkm_bls_section-api--heading">LATEST NUMBERS</div>
+            <div class="panel-body  rkm_bls_section-api--body">
+                <ul>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/cpi.toc.htm"
+                           target="_blank" title="Consumer Price Index">
+                            Consumer Price Index (CPI):</a><br />
+                        <span id="cpi" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/empsit.toc.htm"
+                           target="_blank" title="Unemployment Rate">
+                            Unemployment Rate:</a><br />
+                        <span id="empsit_rate" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/empsit.toc.htm"
+                           target="_blank" title="Payroll Employment">
+                            Payroll Employment:</a><br />
+                        <span id="empsit_pay" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/empsit.toc.htm"
+                           target="_blank" title="Average Hourly">
+                            Average Hourly:</a><br />
+                        <span id="empsit_hourly" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/ppi.toc.htm"
+                           target="_blank" title="Producer Price Index">
+                            Producer Price Index:</a><br />
+                        <span id="ppi" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/eci.toc.htm"
+                           target="_blank" title="Economic Index">
+                            Economic Index:</a><br />
+                        <span id="eci" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/prod2.toc.htm"
+                           target="_blank" title="Productivity">
+                            Productivity:</a><br />
+                        <span id="prod" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/ximpim.toc.htm"
+                           target="_blank" title=" US Import Price Index">
+                            US Import Price Index:</a><br />
+                        <span id="ximpim" class="rkm_bls_section-api--item"></span></li>
+                    <li>
+                        <a href="http://www.bls.gov/news.release/ximpim.toc.htm"
+                           target="_blank" title=" US Export Price Index">
+                            US Export Price Index:</a><br />
+                        <span id="xempim" class="rkm_bls_section-api--item"></span></li>
+                </ul>
+            </div> <!-- ./PANEL BODY | BLS API -->
+        </div> <!-- ./PANEL - BLS API | DEFAULT PANEL -->
+    </div>  <!-- ./MAIN CONTENT | API  COL -->
+
+    <div class=" col-lg-12 col-md-12 rkm_bls_section-featured--items">
+        <!-- BLS | OCCUPATIONAL HANDBOOK -->
+        <div class="rkm_bls_article-handbook" >
+            <div class="panel panel-default rkm_bls_review-monthlylabor">
+                <div class="panel-body rkm_bls_releases-daily--body">
+                    <a href="http://www.bls.gov/ooh/" target="_blank" title="Occupational Outlook Handbook" ><img src="assets/graphics/BLS_OccupationalHandbook_v2.png" class="img-responsive rkm_bls_article-handbook--img"/></a></div>
+            </div>
+        </div>
+    </div> <!-- ./ BLS | OCCUPATIONAL HANDBOOK -->
+
+</div><!--  BLS | NUMBERS | ROW1 -->
+     <!--  BLS | HANDBOOK | ROW2 -->
+     <div class="row rkm_bls_subjects-numbers--row2">
+
+     </div><!--  BLS | HANDBOOK | ROW2 -->
+ </div>  <!--  ./BLS | SUBJECTS | COL1 -->
+
+        <!--  BLS | SUBJECTS | COL2 -->
+<div class="col-lg-9 col-md-9 rkm_bls_subjects-col2">
+    <!-- MAIN CONTENT | INFORMATION SECTION ROW-1 -->
+    <div class="row  rkm_bls_section-info  rkm_bls_section-info--row-1">
+
+        <!-- MAIN | ECONOMIC COL -->
+        <div class="col-lg-4 col-md-4 rkm_bls_section-info--economics">
+            <div class="panel panel-default rkm_bls_section-economic">
+                <div class="panel-heading  rkm_bls_section-economic--heading">THE ECONOMICS DAILY</div>
+                <div class="panel-body  rkm_bls_section-economic--body">
+                    <ul>
+                        <li> So chicory, caramelization, beans carajillo shop eu aged white.</li>
+                        <li>Macchiato, french press, siphon viennese roast extra arabica and coffee milk roast. </li>
+                        <li>Mazagran pumpkin spice, single origin cream body fair trade caffeine..</li>
+                        <li> Redeye, milk espresso id so, grounds robust milk skinny aroma affogato beans.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!-- ./MAIN | ECONOMIC COL -->
+
+        <!-- MAIN | PUBLICATIONS COL -->
+        <div class="col-lg-4 col-md-4  rkm_bls_section-info--publications">
+            <div class="panel panel-default rkm_bls_section-publications">
+                <div class="panel-heading  rkm_bls_section-publications--heading">PUBLICATIONS</div>
+                <div class="panel-body  rkm_bls_section-publications--body">
+                    <ul>
+                        <li>Introduce a little anarchy, upset the established order and everything becomes chaos.  </li>
+                        <li>You're taller than you look in the tabIoids, Mr. Wayne.</li>
+                        <li>Didn't you think there might be casualties? Things always get worse before they get better.</li>
+                        <li>I never wanted you to come back to Gotham.</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- ./MAIN | PUBLICATIONS COL -->
+        <!-- MAIN | TOPICS COL -->
+        <div class="col-lg-4 col-md-4 rkm_bls_section-info--topics">
+            <div class="panel panel-default rkm_bls_section-topics">
+                <div class="panel-heading  rkm_bls_section-topics--heading">TOPICS</div>
+                <div class="panel-body  rkm_bls_section-topics--body">
+                    <ul>
+                        <li>Keel run a rig hempen halter splice the main brace pink careen gabion.  </li>
+                        <li>Scuttle lee broadside chase guns ballast draught draft.</li>
+                        <li>Aye shrouds trysail poop deck salmagundi square-rigged main sheet..</li>
+                        <li>Pirate gally ballast jury mast crack Jennys tea cup bilged on her anchor swab.</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- ./MAIN | TOPICS COL -->
+    </div>  <!-- MAIN CONTENT | INFORMATION SECTION TOP ROW-1 -->
+    <!-- MAIN CONTENT | INFORMATION SECTION ROW-2 -->
+    <!-- MAIN CONTENT | INFORMATION SECTION ROW-2 -->
+    <div class="row  rkm_bls_section-info  rkm_bls_section-info--row-2">
+        <!-- MAIN | RESOURCES COL -->
+        <div class="col-lg-4 col-md-4  rkm_bls_section-info--resources">
+            <div class="panel panel-default rkm_bls_section-resources">
+                <div class="panel-heading  rkm_bls_section-topics--heading">RESOURCES</div>
+                <div class="panel-body  rkm_bls_section-resources--body">
+                    <ul>
+                        <li>Leverage agile frameworks to provide a robust synopsis for high level overviews. . </li>
+                        <li>Bring to the table win-win survival strategies to ensure proactive domination.</li>
+                        <li>User generated content in real-time will have multiple touchpoints for offshoring..</li>
+                        <li>Capitalise on low hanging fruit to identify a ballpark value added activity to beta test.</li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- ./MAIN |RESOURCES COL -->
+
+        <!-- MAIN | CAREERS COL -->
+        <div class="col-lg-4 col-md-4  rkm_bls_section-info--careers">
+            <div class="panel panel-default rkm_bls_section-careers">
+                <div class="panel-heading  rkm_bls_section-topics--heading">CAREERS</div>
+                <div class="panel-body  rkm_bls_section-careers--body">
+                    <ul>
+                        <li>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De  </li>
+                        <li>Hi mindless mortuis soulless creaturas, imo evil stalking monstra  </li>
+                        <li>Nigh tofth eliv ingdead.</li>
+                        <li>Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles </li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- ./MAIN | CAREERS COL -->
+        <!-- MAIN | MORE INFO COL -->
+        <div class="col-lg-4 col-md-4 rkm_bls_section-info--more">
+            <div class="panel panel-default rkm_bls_section-moreinfo">
+                <div class="panel-heading  rkm_bls_section-topics--heading">MORE INFO</div>
+                <div class="panel-body  rkm_bls_section-moreinfo--body">
+                    <ul>
+                        <li>Cupcake ipsum dolor sit amet soufflé bonbon gummi bears.  </li>
+                        <li>Chocolate jelly lemon drops soufflé pudding. </li>
+                        <li>VI love. Cupcake gingerbread I love cake cotton candy tart candy canes. .</li>
+                        <li>Jelly-o apple pie tootsie roll lemon drops marzipan danish sweet.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!-- ./MAIN | MORE INFO COL -->
+    </div>   <!-- MAIN CONTENT | INFORMATION SECTION ROW-2 -->
+
+
+
+</div>  <!--  ./BLS | SUBJECTS | COL2 -->
+
+    </div>   <!-- ./ MAIN CONTENT | RSS FEED & INFORMATION ROW-->
+</div><!--  ./BLS | TOPICS | CONTAINER-FLUID -->
+
+
+
+
 <!--  BLS | FOOTER -->
 <footer class="rkm_bls_footer">
 <!--  BLS | FOOTER CONTAINER-->

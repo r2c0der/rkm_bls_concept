@@ -16,21 +16,17 @@
 @rkm_bls_h5:@rkm_bls_h4/2;
 
 
+/*==================================================
+ *  STRUCTURAL ELEMENTS
+ * ===============================================*/
+
 html{
   overflow-x: hidden;
   .font-family_default();
 }
 
 body{
-  .padding(7em, 0, 0, 0);
-}
- a{
-   color:@rkm_bls_gray-light;
- }
-
-a:hover{
-  color: @rkm_bls_red_light;
-  .text-decoration;
+  .padding(5em, 0, 0, 0);
 }
 
 .errors{
@@ -46,25 +42,18 @@ a:hover{
 TOP BAR | NAVIGATION
 **/
 
-.rkm_bls_header-topbar{
- // .background_color(@rkm_bls_red-dark);
-    color:@rkm_bls_black-charcoal;
-
-  .rkm_bls_header-topbar--title{
-    font-size:@rkm_bls_h2*.85;
-    font-weight:300;
-    font-family: 'Source Sans Pro ExtraLight', sans-serif;
-    padding-top:1em;
-
-  }
-}
+/**
+BOOTSTRAP  | NAVIGATION - NAVBAR
+**/
 
 .navbar{
- margin-bottom: 0;
- .border-radius(0,0);
-  .padding(.75em, 1em, .75em, 1em);
+  margin-bottom: 0;
+  .border-radius(0,0);
+  .padding(1em, 1em, .75em, 1em);
   .transition (all, 0.3s, ease-out, .7s);
   .box-shadow(0, .5px, 7px, 0, @rkm_bls_gray-light);
+  .background_color(@rkm_bls_red-dark);
+  opacity: .9;
 
 }
 
@@ -72,8 +61,9 @@ TOP BAR | NAVIGATION
   color:@rkm_bls_white-pure !important;
 }
 .navbar-inverse  .navbar-nav> li > a:hover{
-  color:@rkm_bls_red_light;
+  color:@rkm_bls_black-almost !important;;
 }
+
 
 .cbp-af-header-shrink{
   .padding(.5em, 0, .5em, 1em);
@@ -82,28 +72,63 @@ TOP BAR | NAVIGATION
 }
 
 /**
-BLS TITLE & SEARCH
+BLS | TOPBAR & SEARCH
 **/
-.rkm_bls_header-identity{
-  .padding(1em, 1em, 1em, 1em);
-  border-bottom:.5em solid @rkm_bls_red-dark;
-  .box-shadow(0, 3.5px, 7px, 0, @rkm_bls_gray-light);
 
-  .rkm_bls_header-identity--title {
-       font-size:@rkm_bls_h1*.75;
-       font-family: 'Playfair Display SC', serif;
-     }
+//LOGO & TITLE AREA
+.rkm_bls_topbar-dol{
+  .padding(0,1em, 0, 0);
+}
+
+//CONTENT: US Department of Labor
+//DOL - ANCHOR TAG
+.rkm_bls_topbar-anchor--dol:link{
+  color:@rkm_bls_white-pure;
 
 }
+
+//DOL - ANCHOR TAG
+.rkm_bls_topbar-anchor--dol:hover{
+  color:@rkm_bls_blue_light;
+  .text-decoration;
+}
+
+.rkm_bls_topbar-title--dol{
+  font-size:@rkm_bls_h2*.85;
+  //color:@rkm_bls_white-pure;
+}
+
+span#dol{
+  .padding(0, 0, 0, 1em);
+}
+
+/**
+BLS TITLE & SEARCH
+**/
+.rkm_bls_searchbar-identity {
+  .padding(1em, 1em, 1em, 1em);
+  border-bottom: .5em solid @rkm_bls_red-dark;
+  .box-shadow(0, 3.5px, 7px, 0, @rkm_bls_gray-light);
+}
+
+  .rkm_bls_search-title--bls > a > span {
+    font-size:@rkm_bls_h1*.55;
+    font-family: 'Playfair Display SC', serif;
+    color:@rkm_bls_black-almost !important;
+    .text-decoration;
+}
+
+
 
 /**
 This increases the size of the first letter of the Bureau Name
 in the header. Works with js function printBLSName.
 **/
 .rkm_bls_styleFirst{
-  font-size:1.25em;
+  font-size:1.50em;
 
 }
+
 
 //SECTIONS
 
@@ -127,13 +152,19 @@ in the header. Works with js function printBLSName.
 
 }
 
-.rkm_bls_wcag-icons{
-    margin-left: 6em;
+.rkm_bls_featured-review{
+  paddin-top:3em;
+}
+
+.rkm_bls_wcag{
+    //margin-left: 9em;
+  text-align:center;
+  .padding(1em, 0, 1em, 2em);
 
 
   .rkm_bls_wcag-icons > i{
     display:inline;
-    .padding(0, 0, 0, .15em);
+    .padding(0, 0, 1em,  1em);
 
   }
 
@@ -150,19 +181,22 @@ in the header. Works with js function printBLSName.
 }
 
 .rkm_bls_article-handbook{
-  .margin(2em, 0, 0, 2em);
+  .margin(.5em, 0, 0, 0);
 }
 .rkm_bls_article-handbook--img{
   width:100%;
 
 }
 
+.rkm_bls_article-socialmedia{
+  text-align:center;
+}
 .rkm_bls_socialmedia-icons{
-  margin-left: 6em;
+
 
   .rkm_bls_socialmedia-icon {
     display: inline;
-    .padding(0, 0, 0, .65em);
+    .padding(0, 0, 0, .5em);
 
       }
 
@@ -200,6 +234,19 @@ in the header. Works with js function printBLSName.
 
 .rkm_bls_section-info--api {
   background-color: @rkm_bls_red-dark;
+}
+
+.state_data-select,
+.rkm_bls_form-topic{
+  .padding(1em, 0, 0, 1em);
+
+}
+.rkm_bls_section-info--row-1{
+ margin-top: 1.5em;
+}
+
+.rkm_bls_section-geo--img{
+  width:100%;
 }
 
 
@@ -275,7 +322,7 @@ FOIA
 
     .rkm_bls_footer-foia--info > a:hover {
        color:@rkm_bls_white-pure;
-     
+
     }
 
 /**
@@ -301,6 +348,47 @@ CONTACT INFO
 
 
 /*** FANCY STUFF **/
+
+/*==================================================
+ * REGIONAL CAROUSEL
+ * ===============================================*/
+#accordion {
+  list-style: none;
+  //.margin(30px, 0, 30px, 0);
+  margin: 30px 0;
+  .padding(0);
+  //padding: 0;
+  height: 200px;
+  overflow: hidden;
+  background-color: @rkm_bls_gray-light};
+
+#accordion li {
+  float: left;
+  display: block;
+  height: 170px;
+  width: 50px;
+  .padding(15px, 0, 15px, 0);
+  //padding: 15px 0;
+  overflow: hidden;
+  color:@rkm_bls_white-pure;
+  .text-decoration;
+  font-size: 16px;
+  line-height: 1.5em;
+  border-left: 1px solid #fff;}
+
+#accordion li img {
+  border: none;
+  border-right: 1px solid #fff;
+  float: left;
+  //.margin(-15px 15px 0 0;);
+  margin: -15px 15px 0 0;
+}
+
+#accordion li.active {
+  width: 450px;
+}
+
+
 
 //FROM CSS-TRICKS
 /*==================================================
@@ -339,27 +427,162 @@ CONTACT INFO
 /*==================================================
  * MEDIA QUERIES
  * ===============================================*/
-@media only screen and (max-device-width : 320px) {
 
-  .rkm_bls_article-handbook{
-    .margin(2em, 0, 0, 0em);
+@media only screen and  (max-device-width : 344px) {
+  body{
+    .padding(7em, 0, 0, 0);
   }
 
-  .rkm_bls_header-topbar--title img{
-    width:4em;
+  .navbar{
+    .background_color(@rkm_bls_white-pure);
+  }
+
+  .navbar-toggle{
+    .background_color(@rkm_bls_red-dark);
+  }
+
+  button.navbar-toggle.collapse{
+    color:@rkm_bls_black-charcoal !important;
+  }
+
+  .rkm_bls_topbar-dol{
+    display:none;
+  }
+  span#bls_top{
+    display:none;
+  }
+  .rkm_bls_topbar-logo--bls{
+    .margin(0,0,0,2em);
+    width: 70px;
+  }
+
+  .rkm_bls_searchbar-identity{
+    display:none;
   }
 }
 
-@media only screen and (min-device-width : 321px) and (max-device-width : 767px) {
 
+@media only screen and (min-device-width :345px) and (max-device-width : 419px) {
 
-  .rkm_bls_article-handbook{
-    .margin(2em, 0, 0, 0em);
+  body{
+    //.padding(5em, 0, 0, 0);
+  }
+
+  .navbar{
+    .background_color(@rkm_bls_white-pure);
+  }
+
+  .navbar-toggle{
+    .background_color(@rkm_bls_red-dark);
+  }
+
+  button.navbar-toggle.collapse{
+    color:@rkm_bls_black-charcoal !important;
+  }
+
+  .rkm_bls_topbar-dol{
+    display:none;
+  }
+
+  .rkm_bls_topbar-bls{
+    visibility: visible;
+  }
+
+  a.rkm_bls_header-topbar--anchor {
+    font-size:@rkm_bls_h2*.65;
+    font-family: 'Playfair Display SC', serif;
+    color:@rkm_bls_black-almost !important;
   }
 
 
+  .rkm_bls_searchbar-identity{
+    display:none;
+  }
+
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width: 420px) and (max-device-width : 769px) {
+  body{
+    .padding(5em, 0, 0, 0);
+  }
+  a.rkm_bls_header-topbar--anchor {
+    font-size:@rkm_bls_h2*.75;
+    font-family: 'Playfair Display SC', serif;
+    color:@rkm_bls_black-almost !important;
+  }
+
+  .navbar{
+    .background_color(@rkm_bls_white-pure);
+  }
+
+  .navbar-toggle{
+    .background_color(@rkm_bls_red-dark);
+  }
+
+  button.navbar-toggle.collapse{
+    color:@rkm_bls_black-charcoal !important;
+  }
+
+  .rkm_bls_topbar-dol{
+    display:none;
+  }
+
+  .rkm_bls_topbar-bls{
+    visibility: visible;
+  }
+
+  .rkm_bls_searchbar-identity{
+    display:none;
+  }
+
+}
+
+
+@media only screen and (min-device-width : 770px) and (max-device-width:1069px) {
+  body{
+    .padding(9em, 0, 0, 0);
+  }
+
+  .navbar{
+    .background_color(@rkm_bls_red-dark);
+  }
+
+  .navbar-toggle{
+    .background_color(@rkm_bls_black-charcoal);
+  }
+
+  button.navbar-toggle.collapse{
+    color:@rkm_bls_black-charcoal !important;
+  }
+
+  .rkm_bls_topbar-dol{
+    visibility: visible;
+  }
+
+  .rkm_bls_topbar-bls{
+     display:none;
+  }
+
+  .rkm_bls_topbar-title--dol{
+    font-size:@rkm_bls_h2*.85;
+    //color:@rkm_bls_white-pure;
+  }
+
+  .rkm_bls_searchbar-identity{
+    visibility: visible;
+  }
+
+}
+
+@media only screen and (min-device-width:1070px){
+  body{
+    .padding(5em, 0, 0, 0);
+  }
+  .rkm_bls_topbar-bls{
+    display:none;
+  }
+  .rkm_bls_searchbar-identity{
+    visibility: visible;
+  }
 
 }
 

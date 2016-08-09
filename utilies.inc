@@ -6,8 +6,15 @@
  * @fileName utilies.inc
  */
 
-
-
+/**
+ * @FUNCTION getStateConfigList()
+ * @purpose Just captures the .ini file with the states listed as
+ * stateAbbreviations => stateName
+ * @returns stringObj
+ */
+function getStateConfigList(){
+    return ("./data/state_list.ini");
+}
 
 /**
  * @FUNCTION validateData()
@@ -16,7 +23,6 @@
  * @param mixed objects/datatypes
  * @return mixed objects/datatypes
  */
-
 function validateData($variable){
     $error_messages = array();
     $type = '';
@@ -69,4 +75,39 @@ function validateData($variable){
 }
 
 
+/**
+ * @FUNCTION createSelectOptions()
+ * @purpose
+ * - Parses a configuration file
+ * - Extracts data into an listArray
+ * - Creates a select menu
+ * @param .ini file key->value pair
+ * @return mixed objects/datatypes
+ */
+function createSelectOptions($list){
 
+    $listArray = parse_ini_file($list, true);
+
+    print('<select class="form-control single_select" name="state">');
+    print ('<option class="state_list" id="state_code">Select a State</option>');
+    foreach($listArray as $states){
+        foreach($states as $key => $value){
+
+            if(!isset($_POST['state_code'])){
+
+                $_POST['state_code'] = 'DC';
+                print("<option value='DC' selected='selected' class ='list_items'>District of Columbia</option>");
+
+            }elseif(($_POST['state_code']!== null) && ($_POST['state_code']==$key)){
+                print("<option value='$key' selected='selected' class ='list_items'>".ucwords(strtolower($value))."</option>");
+            } else{
+                print("<option value='$key' class ='list_items'>".ucwords((strtolower($value)))."</option>");
+            }
+
+        }
+    }
+
+
+    print("</select>");
+
+}

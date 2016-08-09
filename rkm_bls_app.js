@@ -6,8 +6,9 @@
  *
  */
 
+
 function printBLSName(){
-    var bls = document.getElementById("bls");
+    var bls = document.getElementById("bls_search");
     var bureauName = $(bls).text();
     var B = bureauName.charAt(1);
     var L = bureauName.charAt(11);

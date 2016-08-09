@@ -235,7 +235,7 @@ function printBLSResponse(){
        //echo 'Key: '.$keys." | Value: ".$values.'<br /> ';
         $dataArray = array($keys => $values);
         print "<pre>";
-       //print_r($dataArray[$keys]['seriesID']);
+       print_r($dataArray[$keys]['seriesID']);
        //print_r($dataArray[$keys]['data'][0]);
         print "</pre>";
 
@@ -247,13 +247,13 @@ function printBLSResponse(){
 
         }//end INNER FOREACH
 
-     /*   echo "Year: ".$dataArray[$keys]['data'][0]['year']. "<br />";
+       echo "Year: ".$dataArray[$keys]['data'][0]['year']. "<br />";
         echo "Month: ".$dataArray[$keys]['data'][0]['periodName']. "<br />";
         echo "Value: ".$dataArray[$keys]['data'][0]['value']. "<br />";
         echo "Calculation by Month: ".$dataArray[$keys]['data'][0]['calculations']['pct_changes'][1]. "<br />";
         echo "Calculation by Month: ".$dataArray[$keys]['data'][0]['calculations']['pct_changes'][3]. "<br />";
         echo "Calculation by Month: ".$dataArray[$keys]['data'][0]['calculations']['pct_changes'][12]. "<br />";
-        echo "<br /><br />";*/
+        echo "<br /><br />";
 
 
         }//end OUTER FOREACH
@@ -297,7 +297,7 @@ function parseDataFile($data){
     try{
         $jsonObj = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $json_file), TRUE );
         print "<pre>";
-        print_r($jsonObj);
+        //print_r($jsonObj);
         print "</pre>";
     }
     catch(Exception $exDecode){
