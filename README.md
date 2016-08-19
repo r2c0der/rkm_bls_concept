@@ -1,8 +1,9 @@
 # rkm_bls_concept
 Proof of concept site for Bureau of Labor Statistics
 
--BLS website: http://www.bls.gov
--Proof of Concept: http://bls.r2wiki.com
+BLS website: http://www.bls.gov
+
+Proof of Concept: http://bls.r2wiki.com
 
 Current Site Analysis
 
