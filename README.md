@@ -1,49 +1,62 @@
 # rkm_bls_concept
-Proof of concept site for Bureau of Labor Statistics
+<h2>Proof of concept site for Bureau of Labor Statistics</h2>
 
-BLS website: http://www.bls.gov
-
-Proof of Concept: http://bls.r2wiki.com
-
-Current Site Analysis
-
-Issues
-Not mobile responsive
-Lots of information - looks cluttered
-Hard to find information
-Lots of links everywhere
-
-Business Problem: 
-Plan, design and implement a proof of concept using responsive web design best practices.  
-
-Requirements
-- Mobile-first design
-- Reduce page clutter
-- Maintain organizational branding
-- WCAG/508 compliant
-- Retain as much content as possible
+<a href="http://www.bls.gov" target="_blank">BLS Public Site </a> <br />
+<a href="http://bls.r2wiki.com" target="_blank"> Proof of Concept </a> <br />
 
 
-Possible Solutions: 
-- Port data to enterprise CMS: SharePoint or Drupal
-- Design and Implement site from scratch
+<h3>Current Site Analysis</h3>
+<ul>
+<li>Not  responsive </li>
+<li>Lots of information - looks cluttered </li>
+<li>Hard to find information </li>
+<li>Various navigation utilities </li>
+</ul>
 
-SOLUTION: Decided to create a concept from scratch for more control of the templating and API integrations. 
+<h3>Possible Solutions </h3>
+Port to another CMS: SharePoint or Drupal <br />
+Implement 'from scratch' <- chosen option as it provides the least restrictions <br />
 
-//TODO
-Port template and functionality to Drupal - just for fun
-Add Angular functionality to move some functionality to the client; especially displaying data from API
-Implement font-size adjustment
+<h3>Requirements </h3>
+<ul>
+<li>Responsive design</li>
+<li>Reduce page clutter</li>
+<li>Retain organizational branding</li>
+<li>WCAG/508 compliant </li>
+<li>Retain as much content as possible</li>
+</ul>
 
-Technologies In-Use
-- DataSources: BLS API
-- CSS Framework: 
- -- Bootstrap 3
- -- SMACCS - https://smacss.com/
-- Preprocessor: LESS
-- Programming Language: PHP
- Javascript Frameworks
--- JQuery/JQueryUI
-- Graphics: 
- --Photoshop
- --Illustrator
+<code>//STILL TODO </code>
+<ul>
+<li>Complete Angular functionality to display API data</li>
+<li>Parse through XML sitemap to refactor current tabular sitemap </li>
+<li>Make BLS header sticky and hide DOL header upon scrolling for large screens</li>
+<li>Make Regional Area graphics responsive </li>
+</ul>
+
+
+<h3>Technologies In-Use </h3>
+<ul>
+<li> DataSources: BLS API &amp; custom API </li>
+<li>CSS Framework: 
+<ul>
+<li> Bootstrap 3 </li>
+<li>SMACCS - https://smacss.com/</li>
+<li>Preprocessor: LESS</li>
+</ul>
+</li>
+<li> Programming Language: PHP</li>
+<li>Javascript Frameworks
+<ul>
+<li>JQuery/JQueryUI</li>
+<li>Angular2</li>
+<li>Node</li>
+</ul>
+</li>
+<li>Graphics: 
+<ul>
+<li>Photoshop CS6/CC</li>
+<li>Illustrator CS6/CC</li>
+<li>Fireworks CS6/CC</li>
+</ul>
+</li>
