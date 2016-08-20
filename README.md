@@ -1,4 +1,5 @@
 # rkm_bls_concept
+<img src="http://bls.r2wiki.com/assets/logos/Bureau_of_labor_statistics_logo.svg" width="150" />
 <h2>Proof of concept site for Bureau of Labor Statistics</h2>
 
 <a href="http://www.bls.gov" target="_blank">BLS Public Site </a> <br />
